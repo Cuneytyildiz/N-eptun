@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "379752544957",
+    "firebase_url": "https://n-eptun.firebaseio.com",
+    "project_id": "n-eptun",
+    "storage_bucket": "n-eptun.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379752544957:android:0e56c3cc9a99dcff8c15d4",
+        "android_client_info": {
+          "package_name": "com.example.mesaj"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "379752544957-4ndib3tdftffrbdg4d44k99qakvkdrve.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mesaj",
+            "certificate_hash": "2d58b7cacba9d1701804a2da4c724edf3999473c"
+          }
+        },
+        {
+          "client_id": "379752544957-ou855s607n13e11j2s8v8f33d9e2gm9t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAC_NMmDuBcmHFuSdY7sHE_09RCN2-KpE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "379752544957-ou855s607n13e11j2s8v8f33d9e2gm9t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
