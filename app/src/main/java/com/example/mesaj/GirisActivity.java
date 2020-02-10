@@ -15,8 +15,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import static com.google.android.gms.common.internal.safeparcel.SafeParcelable.NULL;
-
 public class GirisActivity extends AppCompatActivity {
 
     EditText kullaniciAdiEditText;
@@ -49,8 +47,10 @@ public class GirisActivity extends AppCompatActivity {
 
     public void ekle(final String kadi){
 
-        if(kadi!=NULL) {
-
+        if(kadi.isEmpty()) {
+            Toast.makeText(getApplicationContext(), "Giriş Başarısız", Toast.LENGTH_LONG).show();
+        }
+        else {
             reference.child("Kullanıcılar").child(kadi).child("kullaniciadi").setValue(kadi).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
@@ -64,9 +64,6 @@ public class GirisActivity extends AppCompatActivity {
                     }
                 }
             });
-        }
-        else{
-            Toast.makeText(getApplicationContext(), "Kullanıcı Adı Giriniz !", Toast.LENGTH_LONG).show();
         }
     }
 

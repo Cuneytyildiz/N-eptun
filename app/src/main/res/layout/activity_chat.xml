@@ -11,7 +11,7 @@
         android:layout_height="80dp"
         android:gravity="center"
         android:id="@+id/ust"
-        android:background="#075E54"
+        android:background="#7f8fa6"
         android:layout_alignParentTop="true"
         android:orientation="horizontal">
         <ImageView
@@ -48,10 +48,10 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="50dp"
         android:gravity="center"
         android:id="@+id/alt"
-        android:background="#075E54"
+        android:background="#7f8fa6"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal">
 

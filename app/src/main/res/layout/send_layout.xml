@@ -16,13 +16,13 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="70dp"
-        android:background="#25D366"
+        android:background="@drawable/rounded_corner"
+
+
         >
 
 
-
 </TextView>
-
 
 
 
