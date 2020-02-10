@@ -15,6 +15,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import static com.google.android.gms.common.internal.safeparcel.SafeParcelable.NULL;
+
 public class GirisActivity extends AppCompatActivity {
 
     EditText kullaniciAdiEditText;
@@ -46,21 +48,26 @@ public class GirisActivity extends AppCompatActivity {
     }
 
     public void ekle(final String kadi){
-        reference.child("Kullanıcılar").child(kadi).child("kullaniciadi").setValue(kadi).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                if(task.isSuccessful()){
-                    Toast.makeText(getApplicationContext(),"Giriş Başarılı",Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(GirisActivity.this,MainActivity.class);
-                    intent.putExtra("kadi",kadi);
-                    startActivity(intent);
-                }
-                else{
-                    Toast.makeText(getApplicationContext(),"Giriş Başarısız",Toast.LENGTH_LONG).show();
-                }
-            }
-        });
 
+        if(kadi!=NULL) {
+
+            reference.child("Kullanıcılar").child(kadi).child("kullaniciadi").setValue(kadi).addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    if (task.isSuccessful()) {
+                        Toast.makeText(getApplicationContext(), "Giriş Başarılı", Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(GirisActivity.this, MainActivity.class);
+                        intent.putExtra("kadi", kadi);
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Giriş Başarısız", Toast.LENGTH_LONG).show();
+                    }
+                }
+            });
+        }
+        else{
+            Toast.makeText(getApplicationContext(), "Kullanıcı Adı Giriniz !", Toast.LENGTH_LONG).show();
+        }
     }
 
 }
