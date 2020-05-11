@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_gravity="center"
         android:layout_height="wrap_content"
-        android:text="Giriş Yap"
+        android:text="Giriş Yap "
         android:textColor="#f5f6fa"
         android:background="#e84118"
         android:textStyle="bold"
